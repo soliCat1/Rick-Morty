@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import CharacterCard from '@/components/CharacterCard.vue';
+import CharacterCard from '@/components/CharacterCard.vue'
 
 export default {
   name: 'App',
@@ -122,11 +122,16 @@ export default {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 40px 100px;
+  padding: 80px 120px;
 
   @media (max-width: 1440px) {
     width: fit-content;
-    padding: 40px;
+    padding: 60px 80px;
+  }
+
+  @media (max-width: 768px) {
+    width: 320px;
+    padding: 40px 20px;
   }
 }
 
@@ -135,11 +140,20 @@ h1 {
   font-size: 62px;
   text-align: center;
   margin-bottom: 60px;
+
+  @media (max-width: 1440px) {
+    font-size: 52px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
 }
 
 .cards {
   display: grid;
-  grid-template-columns: 600px 600px;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-bottom: 40px;
 
@@ -153,6 +167,10 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 30px;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 }
 
 .pagination button {
@@ -167,6 +185,10 @@ h1 {
   display: flex;
   gap: 10px;
   align-items: center;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 }
 
 .pagination button:hover {
@@ -190,6 +212,12 @@ h1 {
   border-top: 10px solid transparent;
   border-right: 20px solid #ffffff;
   border-bottom: 10px solid transparent;
+
+  @media (max-width: 768px) {
+    border-top: 7px solid transparent;
+    border-right: 14px solid #ffffff;
+    border-bottom: 7px solid transparent;
+  }
 }
 
 .pagination__right::after {
@@ -200,6 +228,12 @@ h1 {
   border-top: 10px solid transparent;
   border-left: 20px solid #ffffff;
   border-bottom: 10px solid transparent;
+
+  @media (max-width: 768px) {
+    border-top: 7px solid transparent;
+    border-right: 14px solid #ffffff;
+    border-bottom: 7px solid transparent;
+  }
 }
 
 .filters {
@@ -207,9 +241,16 @@ h1 {
   margin-bottom: 30px;
   width: 600px;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .filters__input {
+  display: block;
   padding: 10px 15px;
   background-color: rgb(60, 62, 68);
   border-radius: 10px;
@@ -217,6 +258,11 @@ h1 {
   color: #ffffff;
   font-family: inherit;
   font-size: 16px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .filters__input:hover {
@@ -237,6 +283,10 @@ h1 {
   font-family: inherit;
   font-size: 16px;
   cursor: pointer;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 
 .filters__button:hover {
